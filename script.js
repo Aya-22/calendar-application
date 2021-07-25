@@ -2,29 +2,39 @@
 var today = moment().format("dddd, MMMM Do YYYY");
 $("#currentDay").text(today);
 
-
-// var timeOfDay = moment().hour()
-// $('.container').text(timeOfDay)
-
 var inputEvent = $('.description');
 var saveEvent = $('.saveBtn');
+var time = $('.time-block')
 var save = true;
 var hourEl = $('.hour');
 
-// function will input the text in the area
-function listedEvent (event) {
+$(document).ready(function(){
+console.log('ready!')
+});
+
+//function will input the text in the area
+function eventEntered (event) {
 event.preventDefault(); //prevent default refreshing
-var event = inputEvent.text('');
 
-if (saveEvent) {
-event.append();
+// variable creates value in textbox in html
+var saved = inputEvent.val().trim();
+
+// if event saved then a message will appear with message below
+if (saved) {
+ console.log('Your event has been saved')   
 }
+
 }
+// function hourInput () {
+// local storage
+// }
+
+// function colorCode () {
+// past, present, future color change on schedule
+
+// }
 
 
-
-
-
-// // TODO: Add an event listener to the `shoppingFormEl` to handle submission
-saveEvent.on('click', listedEvent);
+// event listener to for saveItem on click
+// saveEvent.on('click', saveItem);
 
