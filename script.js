@@ -1,27 +1,27 @@
 // date was added using moment
-function currentDate() {
 var today = moment().format("dddd, MMMM Do YYYY");
 $("#currentDay").text(today);
-}
-// 
+
 
 // var timeOfDay = moment().hour()
 // $('.container').text(timeOfDay)
 
-var inputEvent = $('#textArea');
+var inputEvent = $('.description');
 var saveEvent = $('.saveBtn');
 var save = true;
+var hourEl = $('.hour');
 
-// TODO: Create a function to handle the form submission event that captures the form's `<input>` value and prints it to the `shoppingListEl` as a `<li>`
-
-function listedEvent (event){
+// function will input the text in the area
+function listedEvent (event) {
 event.preventDefault(); //prevent default refreshing
-inputEvent.text('');
+var event = inputEvent.text('');
 
-if (save)
-console.log(inputEvent);
-//   shoppingListEl.append('text);
+if (saveEvent) {
+event.append();
 }
+}
+
+
 
 
 
