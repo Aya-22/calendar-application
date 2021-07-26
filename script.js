@@ -14,7 +14,8 @@ console.log('ready!')
 
 //function will input the text in the area
 function eventEntered (event) {
-event.preventDefault(); //prevent default refreshing
+//prevent default refreshing
+event.preventDefault(); 
 
 // variable creates value in textbox in html
 var saved = inputEvent.val();
@@ -50,5 +51,5 @@ eventEntered();
 
 
 // event listener to for saveItem on click
-// saveEvent.on('click', saveItem);
+saveEvent.on('click', eventEntered);
 
