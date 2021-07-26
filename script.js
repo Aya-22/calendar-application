@@ -29,15 +29,17 @@ hourInput()
 }
 function hourInput () {
 // local storage
-var event = localStorage.getItem('Enter');
+var discreption = $('.discreption').val
 
-if (!event) {
+localStorage.setItem('discreption', discreption);
+
+if (!discreption) {
     return;
 }
 
-inputEvent.textContent = event;
+inputEvent.textContent = discreption;
+eventEntered();
 }
-
 
 // function colorCode () {
 // past, present, future color change on schedule
