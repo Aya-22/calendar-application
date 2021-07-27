@@ -58,11 +58,11 @@ for (var index = 0; index < timeBlocks.length; index++) {
     console.log(element)
     console.log(time)
     if (currentHour === time) {
-    timeBlocks.css('background-color', '#ff6961')
+        element.css('background-color', '#ff6961')
     } if (currentHour >= time) {
-        timeBlocks.css('background-color', '#d3d3d3')
+        element.css('background-color', '#d3d3d3')
     } if (currentHour <= time) {
-        timeBloacks.css('background-color', '#77dd77')
+        element.css('background-color', '#77dd77')
     }
     
 }
