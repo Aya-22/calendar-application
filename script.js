@@ -8,6 +8,9 @@ var time = $('.time-block')
 var save = true;
 var hourEl = $('.hour');
 
+var str = moment().format('hh:mm a')
+console.log(str);
+
 $(document).ready(function(){
 console.log('ready!')
 });
@@ -26,11 +29,11 @@ if (saved) {
 }
 
 hourInput()
-
 }
+
 function hourInput () {
 // local storage
-var discreption = $('.discreption').val
+var discreption = $('.discreption').val();
 
 localStorage.setItem('discreption', discreption);
 
@@ -42,12 +45,15 @@ inputEvent.textContent = discreption;
 eventEntered();
 }
 
-// function colorCode () {
+function colorCode () {
 // past, present, future color change on schedule
-// if (hourEl === 09:00)
+var str = moment().format('hh:mm a')
+console.log(str);
+for (str = 09:00 am) {
+hourEl.css('.past')    
+}
 
-
-// }
+}
 
 
 // event listener to for saveItem on click
