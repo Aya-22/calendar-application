@@ -49,9 +49,10 @@ function colorCode () {
 // past, present, future color change on schedule
 var str = moment().format('hh:mm a')
 console.log(str);
-for (str = 09:00 am) {
-hourEl.css('.past')    
-}
+if (str) {
+hourEl.css('.present')    
+} else if (str)
+hourEl.css('.past')
 
 }
 
