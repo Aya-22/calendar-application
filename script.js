@@ -21,14 +21,16 @@ function eventEntered (event) {
 event.preventDefault(); 
 
 // variable creates value in textbox in html
-var saved = inputEvent.val();
-
+var saved = $(this).parent().find('.description').first().val();
+console.log(saved)
 // if event saved then a message will appear with message below
-if (saved) {
- console.log('Your event has been saved')  
-}
+// if (saved) {
+//  console.log('Your event has been saved')  
+// }
 
-hourInput()
+// hourInput()
+localStorage.setItem('description', saved);
+
 }
 
 function hourInput () {
@@ -47,14 +49,22 @@ eventEntered();
 
 function colorCode () {
 // past, present, future color change on schedule
-var str = moment().format('hh:mm a')
-console.log(str);
-if (str) {
-hourEl.css('.present')    
-} else if (str)
-hourEl.css('.past')
+var currentHour = moment().hour()
+console.log(currentHour);
+var timeBlocks = $(".time-block")
+for (var index = 0; index < timeBlocks.length; index++) {
+    var element = $(timeBlocks[index]);
+    var time = element.attr('data-time')
+    console.log(element)
+    console.log(time)
+}
+// if (currentHour) {
+// hourEl.css('.present')    
+// } else if (str)
+// hourEl.css('.past')
 
 }
+colorCode()
 
 
 // event listener to for saveItem on click
