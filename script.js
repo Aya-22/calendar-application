@@ -57,6 +57,14 @@ for (var index = 0; index < timeBlocks.length; index++) {
     var time = element.attr('data-time')
     console.log(element)
     console.log(time)
+    if (currentHour === time) {
+    timeBlocks.css('background-color', '#ff6961')
+    } if (currentHour >= time) {
+        timeBlocks.css('background-color', '#d3d3d3')
+    } if (currentHour <= time) {
+        timeBloacks.css('background-color', '#77dd77')
+    }
+    
 }
 // if (currentHour) {
 // hourEl.css('.present')    
